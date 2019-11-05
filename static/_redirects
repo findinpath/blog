@@ -1,1 +1,3 @@
 # Redirect alternative domains to primary domain
+https://findinpath.com/* https://www.findinpath.com/:splat 301!
+https://findinpath.netlify.com/* https://www.findinpath.com/:splat 301!
