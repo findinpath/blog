@@ -10,6 +10,9 @@ of `DISTINCT` partition keys of the Cassandra table, but in order to select _all
 to retrieve all the rows of the table the `TOKEN` Cassandra function  needs to be employed. 
 
 
+<re-img src="photo-1513542789411-b6a5d4f31634.jpg"></re-img>
+
+
 Let's consider for the sake of having a concrete example to work on that we store the bookmarks made by the users
 in a Cassandra table.
 
