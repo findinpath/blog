@@ -76,7 +76,7 @@ const TagsPage = props => {
         `}</style>
       </Article>
 
-      <Seo pageTitle="Tags"/>
+      <Seo pageTitle="Tags" location={location}/>
     </React.Fragment>
   );
 };

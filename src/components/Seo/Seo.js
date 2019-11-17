@@ -6,15 +6,16 @@ import config from "../../../content/meta/config";
 const Seo = props => {
   const { data } = props;
   const pageTitle = props.pageTitle;
+  const uri = (props.location || {}).pathname;
+
   const postTitle = ((data || {}).frontmatter || {}).title;
   const postDescription = ((data || {}).frontmatter || {}).description;
-  const postCover = ((data || {}).frontmatter || {}).cover;
-  const postSlug = ((data || {}).fields || {}).slug;
+  const postCover = (((((data || {}).frontmatter || {}).cover || {}).childImageSharp || {}).resize || {}).src;
 
   const title = config.shortSiteTitle + " - " + (postTitle || pageTitle)
   const description = postDescription ? postDescription : config.siteDescription;
-  const image = postCover ? postCover : config.siteImage;
-  const url = config.siteUrl + config.pathPrefix + postSlug;
+  const image = postCover ? config.siteUrl + postCover : config.siteUrl + "/" + config.siteImage;
+  const url = uri ? config.siteUrl + uri : config.siteUrl;
 
   return (
     <Helmet
@@ -32,6 +33,7 @@ const Seo = props => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={config.siteTitle} />
     </Helmet>
   );
 };
