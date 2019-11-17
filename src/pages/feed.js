@@ -24,7 +24,7 @@ const FollowPage = props => {
           <React.Fragment>
             <Article theme={theme}>
               <header>
-                <Headline title="Follow" theme={theme} />
+                <Headline title="Feed" theme={theme} />
               </header>
               <p>Hear about new posts by RSS.</p>
 
@@ -74,7 +74,7 @@ const FollowPage = props => {
                 }
               `}</style>
             </Article>
-            <Seo pageTitle="Follow"/>
+            <Seo pageTitle="Feed"/>
           </React.Fragment>
         )}
       }
