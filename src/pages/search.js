@@ -29,7 +29,7 @@ const SearchPage = props => {
         <Search algolia={algolia} theme={theme} />
       </Article>
 
-      <Seo pageTitle="Search" location={location}/>
+      <Seo pageTitle="Search" uri={props.uri}/>
 
       <style jsx>{`
         .icon {

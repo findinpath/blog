@@ -74,7 +74,7 @@ const FollowPage = props => {
                 }
               `}</style>
             </Article>
-            <Seo pageTitle="Feed" location={location} />
+            <Seo pageTitle="Feed" uri={props.uri} />
           </React.Fragment>
         )}
       }

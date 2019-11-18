@@ -34,8 +34,8 @@ const TagTemplate = props => {
           </Article>
         )}
       </ThemeContext.Consumer>
-
-      <Seo pageTitle={"Posts with tag " + tag} location={location} />
+      
+      <Seo pageTitle={"Posts with tag " + tag} uri={props.uri} />
     </React.Fragment>
   );
 };

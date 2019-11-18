@@ -19,7 +19,7 @@ const PageTemplate = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo data={page} location={location} />
+      <Seo data={page} uri={props.uri} />
     </React.Fragment>
   );
 };

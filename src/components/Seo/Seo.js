@@ -6,7 +6,7 @@ import config from "../../../content/meta/config";
 const Seo = props => {
   const { data } = props;
   const pageTitle = props.pageTitle;
-  const uri = (props.location || {}).pathname;
+  const uri = props.uri;
 
   const postTitle = ((data || {}).frontmatter || {}).title;
   const postDescription = ((data || {}).frontmatter || {}).description;
