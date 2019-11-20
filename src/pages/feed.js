@@ -4,7 +4,7 @@ import theme from "../theme/theme.yaml";
 import Article from "../components/Article";
 import Headline from "../components/Article/Headline";
 import Seo from "../components/Seo";
-import { FaTag , FaRss , FaPaperPlane } from "react-icons/fa";
+import { FaTag , FaRss , FaPaperPlane, FaTwitter } from "react-icons/fa";
 
 const FollowPage = props => {
 
@@ -32,6 +32,13 @@ const FollowPage = props => {
                 <section className="subContainer">
                   <span className="subIcon"><FaRss/></span>
                   <span className="subText">RSS</span>
+                </section>
+              </a>
+
+              <a href="https://twitter.com/findinpath" target="_blank">
+                <section className="subContainer">
+                  <span className="subIcon"><FaTwitter/></span>
+                  <span className="subText">Twitter</span>
                 </section>
               </a>
 
