@@ -65,15 +65,10 @@ public KafkaTestContainers() throws IOException {
       zookeeperContainer.getZookeeperConnect())
       .withNetwork(network);
 
-  Runtime.getRuntime()
-      .addShutdownHook(new Thread(() ->
-              Arrays.asList(zookeeperContainer, kafkaContainer, schemaRegistryContainer)
-                  .parallelStream().forEach(GenericContainer::stop)
-          )
-      );
+  Startables
+      .deepStart(Stream.of(zookeeperContainer, kafkaContainer, schemaRegistryContainer))
+      .join();
 
-  Stream.of(zookeeperContainer, kafkaContainer, schemaRegistryContainer).parallel()
-      .forEach(GenericContainer::start);
 }
 ```
 

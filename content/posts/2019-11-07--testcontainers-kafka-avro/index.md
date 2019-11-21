@@ -47,15 +47,9 @@ Setting up of the containers is done in the following manner:
     schemaRegistryContainer = new SchemaRegistryContainer(zookeeperContainer.getZookeeperConnect())
         .withNetwork(network);
 
-    Runtime.getRuntime()
-        .addShutdownHook(new Thread(() ->
-                Arrays.asList(zookeeperContainer, kafkaContainer, schemaRegistryContainer)
-                    .parallelStream().forEach(GenericContainer::stop)
-            )
-        );
-
-    Stream.of(zookeeperContainer, kafkaContainer, schemaRegistryContainer).parallel()
-        .forEach(GenericContainer::start);
+    Startables
+        .deepStart(Stream.of(zookeeperContainer, kafkaContainer, schemaRegistryContainer))
+        .join();
 
     // ...
   }
