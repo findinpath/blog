@@ -803,6 +803,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.7.2":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
+  integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -6580,6 +6587,13 @@ gatsby-plugin-styled-jsx@^3.1.6:
   integrity sha512-cHzV9TABw8A/zcV0BorrNxgSsQUghRW7XLdO1nKtfrUrkTXcSQEp7v4sUkl1g2/wEpOnED6xZQ1v21Upfqiopw==
   dependencies:
     "@babel/runtime" "^7.6.3"
+
+gatsby-plugin-twitter@^2.1.14:
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.14.tgz#74a1f77b56c741d58e614efd49b6242d56fa474c"
+  integrity sha512-sOiCPB83JN3bQBjMEWnWhfNJrH0xY2y32i8ulmQriyAHOyIwr9TRO3c4zWSB4Y6o0ACxCsNfkQltYJEKol5+gw==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
 
 gatsby-plugin-typescript@^2.1.7:
   version "2.1.15"
