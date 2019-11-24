@@ -1,5 +1,5 @@
 ---
-title: Cucumber spring-retry test specifications 
+title: Testing spring-retry functionality with Cucumber 
 tags: ["cucumber", "spring-retry", "spring-aop", "wiremock"]
 cover: spring-retry-cucumber.jpg
 author: findinpath
