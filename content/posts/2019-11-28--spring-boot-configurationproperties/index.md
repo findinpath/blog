@@ -1,5 +1,5 @@
 ---
-title: Bind spring-boot @ConfigurationProperties in Kotlin 
+title: Bind spring-boot configuration properties in Kotlin 
 tags: ["spring-boot"]
 cover: spring-boot-configuration.png
 author: findinpath
