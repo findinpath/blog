@@ -1,5 +1,5 @@
 ---
-title: Sync tree databse table over Apache Kafka
+title: Sync tree database table over Apache Kafka
 tags: ["kafka-connect-jdbc","kafka","testcontainers", "postgresql"]
 cover: johann-siemens-unsplash.png
 author: findinpath
