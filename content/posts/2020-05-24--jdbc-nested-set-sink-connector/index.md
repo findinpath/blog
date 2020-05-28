@@ -264,14 +264,20 @@ for details.
 
 Checkout the github project [kafka-connect-nested-set-jdbc-sink](https://github.com/findinpath/kafka-connect-nested-set-jdbc-sink/).
 
-At the time of this writing, this plugin is not available via Confluent Hub. This is why a manual install is needed.
-
-Check out the [Installation notes](https://github.com/findinpath/kafka-connect-nested-set-jdbc-sink/#installation-notes) for details
-on how to install the JDBC Nested Set Sink Connector locally on your Apache Kafka ecosystem.
-
 Try out the tests via
 
 ```bash
 mvn clean test
+```
+
+
+
+## Installation notes
+
+The connector is available on [Confluent Hub](https://www.confluent.io/hub/findinpath/kafka-connect-nested-set-jdbc-sink)
+and can be installed via the following command:
+
+```bash
+confluent-hub install findinpath/kafka-connect-nested-set-jdbc-sink:1.0.0
 ```
 

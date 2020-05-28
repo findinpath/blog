@@ -11,6 +11,14 @@ from a source database table towards a sink database table via Apache Kafka in a
 untainted fashion without intermittently having corrupt content on the sink
 database table.
 
+**UPDATE 2020-05-28**
+
+The problem showcased here can be solved also by using the new [JDBC Nested Set Sink Connector](https://www.confluent.io/hub/findinpath/kafka-connect-nested-set-jdbc-sink)
+for Kafka Connect.
+Check out the following blog post for more details on the _JDBC Nested Set Sink Connector_ :
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Showcase of JDBC Nested Set Sink Connector for <a href="https://twitter.com/confluentinc?ref_src=twsrc%5Etfw">@confluentinc</a> platform. <a href="https://t.co/rGxIk3HPRy">https://t.co/rGxIk3HPRy</a></p>&mdash; findinpath (@findinpath) <a href="https://twitter.com/findinpath/status/1265149760614338567?ref_src=twsrc%5Etfw">May 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Nested Set Model
 
 There are multiple ways of storing and reading hierarchies in a relational database:
