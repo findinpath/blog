@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch percolator primer
-tags: ["elasticearch","percolator"]
+tags: ["elasticsearch","percolator"]
 cover: piotr-miazga-zYGtxp8H5sY-unsplash.png
 author: findinpath
 ---

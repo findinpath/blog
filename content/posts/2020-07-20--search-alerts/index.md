@@ -1,6 +1,6 @@
 ---
 title: Search Alerts
-tags: ["elasticearch","percolator", "kafka", "cassandra"]
+tags: ["elasticsearch","percolator", "kafka", "cassandra"]
 cover: markus-winkler-cxoR55-bels-unsplash.png
 author: findinpath
 ---
