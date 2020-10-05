@@ -70,6 +70,9 @@ the needs related to feature toggles:
 In this way, a feature could be safely rolled out only for a subset (e.g. : specific emails, specific IPs,
 only Desktop/Mobile) of the users of the website that makes use of feature toggles.
 
+[Unleash](http://unleash-hosted.com) also comes in an enterprise edition with additional features and a hosted option (SaaS).
+Check out <a href="https://unleash-hosted.com" target="_blank">https://unleash-hosted.com</a>.
+
 
 Common activation strategies offered by Unleash:
 
