@@ -70,13 +70,22 @@ In this case the orders that started being shipped before the `2018-01-01` and c
 would not be taken into account.
 
 One possible solution in order to the question previously mentioned would be to historize the status changes performed on the
-orders which would allow to easily find the shipment date ranges that overlap with the day on which the number or orders
+orders.
+
+The image below contains historized order status changes.
+Note that the [`valid_from`, `valid_to`] date ranges  corresponding to an order are adjacent to each other
+and only the latest entry corresponding to an order  is unbounded (`valid_to` is set to `NULL`):
+
+![historized-order-status-changes.png](historized-order-status-changes.png)
+
+
+This technique allows to easily find the shipment date ranges that overlap with the day on which the number or orders
 in shipment needs to be calculated:
 
 ```sql
 SELECT COUNT(DISTINCT(order_id))
 FROM jaffle_shop.fct_orders
-WHERE valid_from < '2018-01-02' AND valid_to >= '2018-01-01'
+WHERE valid_from < '2018-01-02' AND (valid_to >= '2018-01-01' OR valid_to IS NULL)
 AND status = 'shipped';
 ```
 
