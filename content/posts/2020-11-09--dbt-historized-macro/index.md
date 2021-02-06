@@ -7,7 +7,7 @@ author: findinpath
 
 
 Historize the status changes performed on the database entities an obtain the date ranges
-corresponding to the validify of each status in which the entity has been during its lifecycle.
+corresponding to the validity of each status in which the entity has been during its lifecycle.
 
 Let's use a fictional example of an online ecommerce store, where the `orders` table
 in the database backing the store is be one of the core entities.
