@@ -160,10 +160,10 @@ WITH src_user_subscriptions AS (
                 ARRAY_SIZE(subscriptions)                                                     AS subscriptions_size
         FROM (
                     SELECT id                                                    AS load_id,
-                           record:id::NUMBER                                     AS user_id,
-                           TO_TIMESTAMP(record:exported_at::NUMBER,3)            AS exported_at,
-                           record:subscriptions::VARIANT                         AS subscriptions
-                    FROM playground.dbt_video_platform.raw_user_description
+                           record:"id"::NUMBER                                     AS user_id,
+                           TO_TIMESTAMP(record:"exported_at"::NUMBER,3)            AS exported_at,
+                           record:"subscriptions"::VARIANT                         AS subscriptions
+                    FROM playground.dbt_video_platform.raw_user_subscription
         )
 ), user_subscription AS (
         SELECT src.load_id,
@@ -171,10 +171,10 @@ WITH src_user_subscriptions AS (
                src.next_load_id,
                src.next_exported_at,
                src.user_id,
-               subscription.value:id::NUMBER                              AS subscription_id,
-               subscription.index                                         AS subscription_index,
-               subscription.value:name::VARCHAR                           AS subscription_name,
-               TO_TIMESTAMP(subscription.value:subscribed_at::NUMBER,3)   AS subscription_subscribed_at,
+               subscription.value:"id"::NUMBER                              AS subscription_id,
+               subscription.index                                           AS subscription_index,
+               subscription.value:"name"::VARCHAR                           AS subscription_name,
+               TO_TIMESTAMP(subscription.value:"subscribed_at"::NUMBER,3)   AS subscription_subscribed_at,
                src.subscriptions_size
         FROM src_user_subscriptions src
         LEFT OUTER JOIN TABLE(FLATTEN(input => src.subscriptions)) subscription ON 1=1
