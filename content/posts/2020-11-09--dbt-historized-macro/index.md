@@ -1,6 +1,6 @@
 ---
 title: dbt historized macro
-tags: ["dbt", "dtspec"]
+tags: ["dbt", "dtspec", "snowflake"]
 cover: giammarco-boscaro-zeH-ljawHtg-unsplash.png
 author: findinpath
 ---

@@ -1,6 +1,6 @@
 ---
 title: Infer deletions in batched ELT staging data
-tags: ["dbt", "dtspec"]
+tags: ["dbt", "dtspec", "snowflake"]
 cover: omair-k-drVux60C_A4-unsplash.png
 author: findinpath
 ---
