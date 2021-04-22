@@ -71,10 +71,16 @@ As explained on Trino [documentation](https://trino.io/docs/current/overview/con
 This method requires the least typing:
 
 ```sql
-SELECT value FROM  UNNEST(SEQUENCE(1,10)) AS t(value);
+SELECT value FROM UNNEST(SEQUENCE(1,10)) AS t(value);
 ```
 
 Consult the documentation for [UNNEST](https://trino.io/docs/current/sql/select.html#unnest) and [SEQUENCE](https://trino.io/docs/current/functions/array.html?highlight=sequence#sequence) for more details.
+
+`UNNEST` can be used also for an arbitrary array of integers:
+
+```sql
+SELECT value FROM UNNEST(ARRAY[1,2,3,4,5,6,7,8,9,10]) AS t(value);
+```
 
 ## Inline the range via `UNION ALL`
 
